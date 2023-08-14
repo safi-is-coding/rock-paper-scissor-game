@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>objects</title>
+
+</head>
+<body>
+    <h1>Hello World</h1>
+    <script>
+        /*
+        const product = {
+            name : 'socks',
+            price : 1090
+        };
+
+        console.log(product);
+        console.log(product.name);
+        console.log(product.price);
+
+        product.name = 'cotton socks';
+        console.log(product);
+
+        // adding a new vlaue to an object
+        person.newValue = 'maz';
+        console.log(person);
+
+        //delete a value in the object
+        delete person.newValue;
+        console.log(person);
+        */
+
+        const product2 = {
+            name : 'shirt',
+            ['deliver-time'] : '1 day',
+
+            //nested objects
+            rating : {
+                stars : 4.5,
+                count : 87
+            },
+
+            //function inside a object
+            // This is called Method
+            fun : function function1() {
+                console.log('function inside object');
+            }
+        };
+        
+        //we use bracket notations when we use some symbols like h-k which compiler see like a math operator.
+        console.log(product2);
+        
+        console.log(product2['name']);
+        console.log(product2["deliver-time"]);
+        
+        console.log(product2.rating.stars);
+        console.log(product2.rating.count);
+
+        product2.fun(); //calling the finction inside the object
+
+
+    /*
+
+    JSON - JavaScript Object Notation
+
+    - basically its a syntax
+    - similar to JavaScript Object
+    - but has less features
+
+    Difference
+    - all properties in string must use "" in JSON, it does not support single quotes
+    -JSON does not support functions
+    
+    JS object syntax
+    {name: 'shirt', deliver-time: '1 day', rating: {…}, fun: ƒ}
+    deliver-time: "1 day"
+    fun:  ƒ function1()
+    name: "shirt"
+    rating: {stars: 4.5, count: 87}
+    
+    JSON object syntax
+    {"name":"shirt","deliver-time":"1 day","rating":{"stars":4.5,"count":87}}
+
+    Why we use JSON syntax instead of JAVA SCRIPT syntax
+    - A javascript object only makes sence in JAVASCRIPT, on the other hand JSON syntax can be understood by almost every programming language.
+    - So JSON syntax is more universal
+
+    We use JSON 
+    - when we use data between computers as it might use different programming languages
+    - we also use JSON when we store data
+    
+    Built-in JSON Object
+    
+    it helps to convert:
+    JavaScript Object -> JSON
+
+    */
+
+
+        console.log(JSON.stringify(product2));
+
+        const jsonString = JSON.stringify(product2);
+
+        //converting JSON back to JS
+        console.log(JSON.parse(jsonString));
+
+        // it will help to store the elements in the locak storage which means that it will remain same even when we refresh the page.
+        // setItem(' ',' ') helps to store the elements but only in the string form therefore we are using JSON in our program 
+        localStorage.setItem('message','hello safi');
+
+        // this localStorage.getItem() help us to get the elements out from the local storage
+        console.log(localStorage.getItem('message'));
+
+
+
+        console.log('hello'.length);
+        console.log('hello'.toUpperCase);
+        
+
+    </script>
+</body>
+</html>

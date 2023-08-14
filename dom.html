@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <button>Hello</button>
+    <button class="js-button">Second Button</button>
+    
+    <script>
+        /*
+        //some properties of dom
+        
+        console.log(document.title); // it will display the title of the webpage
+        console.log(document.body); //it will show all the tags present in the body
+        console.log(document.body.innerHTML); // it will display all the content present inside the body tag
+
+
+        // DOM - Document Object Model
+        // the document object represents/models the webpage
+
+        document.body.innerHTML = 'hello safi';
+        document.title = 'changed';
+
+        */
+
+        // document.querySelector() 
+        // - it let us get any element from the page and put it inside javascript
+
+        console.log(document.querySelector('button').innerHTML);
+
+        document.querySelector('button')
+            .innerHTML = 'changed';
+
+        const buttonElement = document.querySelector('.js-button');
+
+        console.log(buttonElement);
+
+
+
+
+    </script>
+</body>
+</html>

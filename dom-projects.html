@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM projects</title>
+
+    <style>
+
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .subscribe{
+            border: none;
+            background-color: black;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 50px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-bottom: 30px;
+        }
+
+        .is-subscribed{
+            background-color: rgba(240, 240, 240);
+            color: black;
+        }
+
+        
+
+
+    </style>
+</head>
+<body>
+    <p>YouTube subscribe button </p>
+    <button onclick="subscribe()" class="js-subscribe-button subscribe"> Subscribe
+    </button>
+
+
+    <script>
+        function subscribe() {
+            const buttonElement = document.querySelector('.js-subscribe-button');
+            // here we use .innerText coz if we give spaces in the button tag element it innerHTML will not work as it also compares the spaces 
+            if(buttonElement.innerText === 'Subscribe') {
+                buttonElement.innerHTML = 'Subscribed';
+                buttonElement.classList.add('is-subscribed'); //used to add classes to html element
+            } 
+            else {
+                buttonElement.innerHTML = 'Subscribe';
+                buttonElement.classList.remove('is-subscribed');
+            }
+        }
+        
+
+    </script>
+    
+</body>
+</html>
